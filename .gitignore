@@ -1,6 +1,5 @@
 .gradle
 /build/
-!gradle/wrapper/gradle-wrapper.jar
 /out
 
 ### STS ###
@@ -25,4 +24,3 @@ dist/
 nbdist/
 .nb-gradle/
 HELP.md
-gradle/
