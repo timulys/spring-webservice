@@ -33,5 +33,5 @@ deploy:
     acl: public_read
     wait-until-deployed: true
     on:
-      repo: timulys/spring-webservice #Github 주소
+      repo: https://github.com/timulys/spring-webservice.git #Github 주소
       branch: master
