@@ -35,7 +35,6 @@ deploy:
     on:
       repo: https://github.com/timulys/spring-webservice.git #Github 주소
       branch: master
-
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
