@@ -35,6 +35,21 @@ deploy:
     on:
       repo: https://github.com/timulys/spring-webservice.git #Github 주소
       branch: master
+
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: springboot-webservice-deploy-jhchoi
+    key: spring-webservice.zip # S3 버킷에 저장된 spring-webservice.zip을 EC2로 배포
+    bundle_type: zip
+    application: springboot-webservice # 웹 콘솔에 등록한 CodeDeploy 어플리케이션
+    deployment_group: springboot-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      repo: https://github.com/timulys/spring-webservice.git
+      branch: master
+
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
